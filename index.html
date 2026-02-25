@@ -48,8 +48,8 @@
                 <a href="#contact" class="bg-brand-gold text-brand-green px-8 py-4 rounded-xl font-bold shadow-lg inline-block hover:bg-yellow-500 transition-colors">Book a Consultation</a>
             </div>
             <div class="lg:w-1/2 flex justify-center px-10">
-                <div class="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-brand-gold shadow-2xl">
-                    <img src="IMG_0843.JPG" alt="Zahed Khan" class="object-cover w-full h-full object-top">
+                <div class="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-brand-gold shadow-2xl bg-white">
+                    <img src="IMG_0843.jpg" alt="Zahed Khan" class="object-cover w-full h-full object-top">
                 </div>
             </div>
         </div>
@@ -104,33 +104,47 @@
         </div>
     </section>
 
+    <section class="py-16 bg-brand-green border-y border-brand-gold">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-white mb-10">Connect With Us</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                <div class="rounded-xl overflow-hidden shadow-2xl border-2 border-brand-gold hover:scale-105 transition-transform duration-300 max-w-md w-full">
+                    <img src="1.png" alt="Isbah Wealth & Immigration Business Card Front" class="w-full h-auto">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-2xl border-2 border-brand-gold hover:scale-105 transition-transform duration-300 max-w-md w-full">
+                    <img src="2.png" alt="Isbah Wealth & Immigration Business Card Back" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-12">
             <div class="md:w-1/2">
                 <h2 class="text-4xl font-bold text-brand-green mb-6">Get in Touch</h2>
-                <div class="bg-brand-green text-white p-8 rounded-2xl shadow-lg">
-                    <h3 class="text-3xl font-bold text-brand-gold mb-1">Zahed Khan</h3>
-                    <p class="text-lg text-gray-300 mb-8 border-b border-gray-600 pb-4">Founder & Lead Consultant</p>
+                <div class="bg-gray-50 border border-gray-200 p-8 rounded-2xl shadow-md">
+                    <h3 class="text-3xl font-bold text-brand-green mb-1">Zahed Khan</h3>
+                    <p class="text-lg text-gray-500 mb-8 border-b border-gray-300 pb-4">Founder & Lead Consultant</p>
 
-                    <div class="space-y-6">
+                    <div class="space-y-6 text-gray-700">
                         <div class="flex items-center">
-                            <i class="fas fa-envelope text-brand-gold text-xl w-8"></i>
-                            <a href="mailto:zahedkhan3795@gmail.com" class="hover:text-brand-gold">zahedkhan3795@gmail.com</a>
+                            <i class="fas fa-envelope text-brand-green text-xl w-8"></i>
+                            <a href="mailto:zahedkhan3795@gmail.com" class="hover:text-brand-gold transition-colors font-medium">zahedkhan3795@gmail.com</a>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-phone-alt text-brand-gold text-xl w-8"></i>
-                            <div class="flex flex-col">
-                                <a href="tel:7017295641" class="hover:text-brand-gold">701-729-5641</a>
-                                <a href="tel:5572045972" class="hover:text-brand-gold">557-204-5972</a>
+                            <i class="fas fa-phone-alt text-brand-green text-xl w-8"></i>
+                            <div class="flex flex-col font-medium">
+                                <a href="tel:7017295641" class="hover:text-brand-gold transition-colors">701-729-5641</a>
+                                <a href="tel:5572045972" class="hover:text-brand-gold transition-colors">557-204-5972</a>
                             </div>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-globe text-brand-gold text-xl w-8"></i>
-                            <a href="https://www.isbahwealthandimmigration.com" target="_blank" class="hover:text-brand-gold">www.isbahwealthandimmigration.com</a>
+                            <i class="fas fa-globe text-brand-green text-xl w-8"></i>
+                            <a href="https://www.isbahwealthandimmigration.com" target="_blank" class="hover:text-brand-gold transition-colors font-medium">www.isbahwealthandimmigration.com</a>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-map-marker-alt text-brand-gold text-xl w-8"></i>
-                            <span>Houston, Texas</span>
+                            <i class="fas fa-map-marker-alt text-brand-green text-xl w-8"></i>
+                            <span class="font-medium">Houston, Texas</span>
                         </div>
                     </div>
                 </div>
@@ -138,15 +152,23 @@
 
             <div class="md:w-1/2">
                 <h3 class="text-2xl font-bold text-gray-800 mb-6">Send a Message</h3>
-                <form class="space-y-4">
+
+                <form action="https://formsubmit.co/zahedkhan3795@gmail.com" method="POST" class="space-y-4">
+                    <input type="hidden" name="_subject" value="New Inquiry from Isbah Website!">
+                    <input type="hidden" name="_captcha" value="true">
+
                     <div class="grid grid-cols-2 gap-4">
-                        <input type="text" placeholder="First Name" class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-green">
-                        <input type="text" placeholder="Last Name" class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-green">
+                        <input type="text" name="First Name" placeholder="First Name" required class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-green">
+                        <input type="text" name="Last Name" placeholder="Last Name" required class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-green">
                     </div>
-                    <input type="email" placeholder="Email Address" class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-green">
-                    <input type="tel" placeholder="Phone Number" class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-green">
-                    <textarea placeholder="How can we help you?" class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-green" rows="4"></textarea>
-                    <button type="button" class="w-full bg-brand-green hover:bg-green-900 text-brand-gold font-bold py-4 rounded-xl transition-colors text-lg">Send Message</button>
+
+                    <input type="email" name="Email Address" placeholder="Email Address" required class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-green">
+
+                    <input type="tel" name="Phone Number" placeholder="Phone Number" class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-green">
+
+                    <textarea name="Message" placeholder="How can we help you?" required class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-green" rows="4"></textarea>
+
+                    <button type="submit" class="w-full bg-brand-green hover:bg-green-900 text-brand-gold font-bold py-4 rounded-xl transition-colors text-lg">Send Message</button>
                 </form>
             </div>
         </div>
