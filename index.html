@@ -1,276 +1,350 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isbah Wealth & Immigration | Zahed Khan</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --brand-green: #1a3628;
             --brand-gold: #cfa144;
         }
-        .bg-brand-green { background-color: var(--brand-green); }
-        .text-brand-green { color: var(--brand-green); }
-        .bg-brand-gold { background-color: var(--brand-gold); }
-        .text-brand-gold { color: var(--brand-gold); }
-        .border-brand-gold { border-color: var(--brand-gold); }
+
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
+
+        /* Custom UI Elements */
+        .flag-ball {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            display: inline-block;
+            background-color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        .flag-ball img { width: 100%; height: 100%; object-fit: cover; }
+        .flag-ball:hover { transform: translateY(-3px) scale(1.1); border-color: var(--brand-gold); }
+
+        .service-card { transition: all 0.3s ease; }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-900">
+<body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
 
-    <nav class="bg-brand-green shadow-md sticky top-0 z-50">
+    <header class="bg-[#1a3628] shadow-lg sticky top-0 z-50 border-b border-[#cfa144]/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <div class="flex items-center gap-2">
-                    <span class="font-bold text-xl md:text-2xl tracking-tight text-brand-gold font-serif">Isbah Wealth & Immigration</span>
+                <div class="flex items-center">
+                    <span class="font-serif font-bold text-xl md:text-2xl tracking-tight text-[#cfa144]">Isbah Wealth & Immigration</span>
                 </div>
 
-                <div class="hidden lg:flex space-x-6 font-medium text-white items-center">
-                    <a href="index.html" class="text-brand-gold transition-colors border-b-2 border-brand-gold">Home</a>
-                    <a href="index.html#about" class="hover:text-brand-gold transition-colors">About</a>
-                    <a href="finance.html" class="hover:text-brand-gold transition-colors">Finance</a>
-                    <a href="realestate.html" class="hover:text-brand-gold transition-colors">Real Estate</a>
-                    <a href="immigration.html" class="hover:text-brand-gold transition-colors">Immigration</a>
-                    <a href="fees.html" class="hover:text-brand-gold transition-colors">Fees</a>
+                <nav class="hidden lg:flex space-x-6 font-medium text-white items-center">
+                    <a href="#home" class="text-[#cfa144] border-b-2 border-[#cfa144] pb-1">Home</a>
+                    <a href="#about" class="hover:text-[#cfa144] transition-colors pb-1">About</a>
+                    <a href="pages/finance.html" class="hover:text-[#cfa144] transition-colors pb-1">Finance</a>
+                    <a href="pages/realestate.html" class="hover:text-[#cfa144] transition-colors pb-1">Real Estate</a>
+                    <a href="pages/immigration.html" class="hover:text-[#cfa144] transition-colors pb-1">Immigration</a>
+                    <a href="pages/fees.html" class="hover:text-[#cfa144] transition-colors pb-1">Fees</a>
 
-                    <a href="index.html#contact" class="bg-brand-gold text-brand-green px-6 py-2 rounded-lg font-bold hover:bg-yellow-500 transition-colors">Contact</a>
-                </div>
+                    <div class="flex items-center gap-2 px-4 py-1 border-l border-[#cfa144]/30 ml-2">
+                        <div class="flag-ball" title="USA"><img src="https://flagcdn.com/w80/us.png" alt="USA"></div>
+                        <div class="flag-ball" title="India"><img src="https://flagcdn.com/w80/in.png" alt="India"></div>
+                        <div class="flag-ball" title="Nepal"><img src="https://flagcdn.com/w80/np.png" alt="Nepal"></div>
+                        <div class="flag-ball" title="Bhutan"><img src="https://flagcdn.com/w80/bt.png" alt="Bhutan"></div>
+                        <div class="flag-ball" title="Pakistan"><img src="https://flagcdn.com/w80/pk.png" alt="Pakistan"></div>
+                        <div class="flag-ball" title="Bangladesh"><img src="https://flagcdn.com/w80/bd.png" alt="Bangladesh"></div>
+                    </div>
 
-                <div class="lg:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-brand-gold hover:text-white focus:outline-none p-2">
-                        <i class="fas fa-bars text-3xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
+                    <a href="#contact" class="bg-[#cfa144] text-[#1a3628] px-6 py-2 rounded-lg font-bold hover:bg-yellow-500 transition-colors shadow-sm">Contact</a>
+                </nav>
 
-        <div id="mobile-menu" class="hidden lg:hidden bg-brand-green border-t border-brand-gold shadow-xl absolute w-full">
-            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
-                <a href="index.html" class="mobile-link block px-3 py-2 rounded-md text-lg font-medium text-brand-gold bg-green-900">Home</a>
-                <a href="index.html#about" class="mobile-link block px-3 py-2 rounded-md text-lg font-medium text-white hover:text-brand-gold hover:bg-green-900 transition-colors">About</a>
-                <a href="finance.html" class="mobile-link block px-3 py-2 rounded-md text-lg font-medium text-white hover:text-brand-gold hover:bg-green-900 transition-colors">Finance</a>
-                <a href="realestate.html" class="mobile-link block px-3 py-2 rounded-md text-lg font-medium text-white hover:text-brand-gold hover:bg-green-900 transition-colors">Real Estate</a>
-                <a href="immigration.html" class="mobile-link block px-3 py-2 rounded-md text-lg font-medium text-white hover:text-brand-gold hover:bg-green-900 transition-colors">Immigration</a>
-                <a href="fees.html" class="mobile-link block px-3 py-2 rounded-md text-lg font-medium text-white hover:text-brand-gold hover:bg-green-900 transition-colors">Fees</a>
-
-                <a href="index.html#contact" class="mobile-link block px-3 py-3 rounded-md text-lg font-bold bg-brand-gold text-brand-green mt-4 mx-4 hover:bg-yellow-500 transition-colors">Contact</a>
-            </div>
-        </div>
-    </nav>
-
-    <section id="home" class="bg-brand-green py-20 border-b-8 border-brand-gold">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
-            <div class="lg:w-1/2 text-white text-center lg:text-left">
-                <h2 class="text-brand-gold text-xl font-semibold mb-2 tracking-wide uppercase">Legacy Consulting & Trust</h2>
-                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
-                    Your Gateway to Wealth and Residency in <span class="text-brand-gold">Houston</span>
-                </h1>
-                <p class="text-lg text-gray-300 mb-8">
-                    We believe in quality service and trust. Partner with us for expert financial advisory, real estate solutions, and immigration services.
-                </p>
-                <a href="#contact" class="bg-brand-gold text-brand-green px-8 py-4 rounded-xl font-bold shadow-lg inline-block hover:bg-yellow-500 transition-colors w-full sm:w-auto">Book a Consultation</a>
-            </div>
-            <div class="lg:w-1/2 flex justify-center px-4 md:px-10">
-                <div class="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-brand-gold shadow-2xl bg-white">
-                    <img src="IMG_0843.jpg" alt="Zahed Khan" class="object-cover w-full h-full object-top">
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-[#cfa144] p-2 focus:outline-none"><i class="fas fa-bars text-3xl"></i></button>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-12 items-center">
-            <div class="md:w-1/2">
-                <h2 class="text-brand-gold text-xl font-semibold mb-2 tracking-wide uppercase">About The Founder</h2>
-                <h3 class="text-3xl md:text-4xl font-bold text-brand-green mb-6">Precision, Trust, and Legacy Building</h3>
-                <div class="space-y-4 text-gray-600 text-lg leading-relaxed">
-                    <p>
-                        Isbah Wealth & Immigration was founded on the core belief that securing your family's future requires both strategic planning and an unwavering attention to detail.
-                    </p>
-                    <p>
-                        As the Founder and Lead Consultant, <strong>Zahed Khan</strong> brings a unique and highly effective skill set to the Houston community. With a professional background rooted in complex Data Quality Assurance and active investment management, Zahed applies an analytical, meticulous approach to every financial portfolio, tax document, and immigration form he handles.
-                    </p>
-                    <p>
-                        As a dedicated real estate professional and family man, Zahed understands firsthand the importance of building generational wealth. Whether you are navigating the competitive Texas real estate market, establishing an education savings plan, or seeking reliable guidance through your residency journey, Zahed is committed to being your trusted partner every step of the way.
-                    </p>
-                </div>
-            </div>
-            <div class="md:w-1/2 flex flex-col gap-6 w-full">
-                <div class="bg-brand-green text-white p-6 md:p-8 rounded-2xl shadow-lg border-l-4 border-brand-gold">
-                    <i class="fas fa-bullseye text-3xl text-brand-gold mb-4"></i>
-                    <h4 class="text-2xl font-bold mb-2">Our Mission</h4>
-                    <p class="text-gray-300">To provide Houston residents with high-quality, trustworthy consulting services that simplify the path to homeownership, financial independence, and legal residency.</p>
-                </div>
-                <div class="bg-gray-50 border border-gray-200 p-6 md:p-8 rounded-2xl shadow-sm border-l-4 border-brand-gold">
-                    <i class="fas fa-handshake text-3xl text-brand-green mb-4"></i>
-                    <h4 class="text-2xl font-bold text-brand-green mb-2">Our Commitment</h4>
-                    <p class="text-gray-600">We treat your legacy as if it were our own. Every application, investment strategy, and property negotiation is handled with strict confidentiality and absolute precision.</p>
-                </div>
-            </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-[#1a3628] border-t border-[#cfa144] absolute w-full left-0 text-center py-6 space-y-4 shadow-xl z-50">
+            <a href="#home" class="mobile-link block text-white text-lg">Home</a>
+            <a href="#about" class="mobile-link block text-white text-lg">About</a>
+            <a href="pages/finance.html" class="mobile-link block text-white text-lg">Finance</a>
+            <a href="pages/realestate.html" class="mobile-link block text-white text-lg">Real Estate</a>
+            <a href="pages/immigration.html" class="mobile-link block text-white text-lg">Immigration</a>
+            <a href="pages/fees.html" class="mobile-link block text-white text-lg">Fees</a>
+            <a href="#contact" class="mobile-link block bg-[#cfa144] text-[#1a3628] mx-8 py-3 rounded-xl font-bold">Contact Us</a>
         </div>
-    </section>
+    </header>
 
-    <section id="services" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-brand-green mb-4">Our Services</h2>
-                <p class="text-xl text-gray-600">Comprehensive solutions tailored to your legacy and future.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-brand-gold hover:shadow-lg transition-shadow">
-                    <i class="fas fa-chart-line text-4xl text-brand-green mb-6"></i>
-                    <h3 class="font-bold text-2xl mb-4 text-brand-green">Financial & Tax</h3>
-                    <ul class="text-gray-600 space-y-3">
-                        <li><i class="fas fa-check text-brand-gold mr-2"></i> Financial Advisory</li>
-                        <li><i class="fas fa-check text-brand-gold mr-2"></i> Investment Account Advice & Management</li>
-                        <li><i class="fas fa-check text-brand-gold mr-2"></i> Education Savings & Custodial Accounts (Tax Free 529 Plans)</li>
-                        <li><i class="fas fa-check text-brand-gold mr-2"></i> Tax Services</li>
-                        <li><i class="fas fa-check text-brand-gold mr-2"></i> Payroll & Bookkeeping Service</li>
-                    </ul>
-                    <a href="finance.html" class="inline-block mt-6 text-brand-green font-bold hover:text-brand-gold transition-colors">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+    <main class="flex-grow">
+        <section id="home" class="relative bg-[#1a3628] py-20 border-b-8 border-[#cfa144] overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-12 relative z-10">
+                <div class="lg:w-1/2 text-white text-center lg:text-left">
+                    <h2 class="text-[#cfa144] text-xl font-semibold mb-3 tracking-widest uppercase">Legacy Consulting & Trust</h2>
+                    <h1 class="text-4xl md:text-5xl lg:text-7xl font-serif font-black leading-tight mb-6">Your Gateway to Wealth and Residency in <span class="text-[#cfa144]">Houston</span></h1>
+                    <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto lg:mx-0">Partner with us for expert financial advisory, real estate solutions, and meticulous immigration document preparation.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="bg-[#cfa144] text-[#1a3628] px-10 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">Book Consultation</a>
+                        <a href="pages/fees.html" class="border-2 border-[#cfa144] text-[#cfa144] px-10 py-4 rounded-full font-bold hover:bg-[#cfa144] hover:text-[#1a3628] transition-all">View Pricing</a>
+                    </div>
                 </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-brand-gold hover:shadow-lg transition-shadow">
-                    <i class="fas fa-home text-4xl text-brand-green mb-6"></i>
-                    <h3 class="font-bold text-2xl mb-4 text-brand-green">Real Estate</h3>
-                    <ul class="text-gray-600 space-y-3">
-                        <li><i class="fas fa-check text-brand-gold mr-2"></i> Buying Properties</li>
-                        <li><i class="fas fa-check text-brand-gold mr-2"></i> Selling Properties</li>
-                        <li><i class="fas fa-check text-brand-gold mr-2"></i> Leasing Services</li>
-                        <li><i class="fas fa-check text-brand-gold mr-2"></i> New Construction Advisory & Home Buying Support</li>
-                    </ul>
-                    <a href="realestate.html" class="inline-block mt-6 text-brand-green font-bold hover:text-brand-gold transition-colors">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-brand-gold hover:shadow-lg transition-shadow">
-                    <i class="fas fa-passport text-4xl text-brand-green mb-6"></i>
-                    <h3 class="font-bold text-2xl mb-4 text-brand-green">Immigration</h3>
-                    <ul class="text-gray-600 space-y-3">
-                        <li><i class="fas fa-check text-brand-gold mr-2"></i> Green Card Applications</li>
-                        <li><i class="fas fa-check text-brand-gold mr-2"></i> Citizenship Services</li>
-                        <li><i class="fas fa-check text-brand-gold mr-2"></i> Passport Application</li>
-                    </ul>
-                    <a href="immigration.html" class="inline-block mt-6 text-brand-green font-bold hover:text-brand-gold transition-colors">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
-                </div>
-            </div>
-
-            <div class="mt-12 text-center">
-                <a href="fees.html" class="bg-white border-2 border-brand-gold text-brand-green px-8 py-3 rounded-xl font-bold hover:bg-yellow-50 transition-colors inline-block shadow-sm">View Our Service Fees</a>
-            </div>
-
-            <div class="mt-8 bg-yellow-50 border-l-4 border-yellow-400 p-4 max-w-4xl mx-auto rounded-xl">
-                <p class="text-sm text-yellow-800 text-center font-medium">
-                    <strong>Disclaimer:</strong> We are not authorized to offer legal immigration advice; our services are limited to completing and preparing immigration forms.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 bg-brand-green border-y border-brand-gold">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-white mb-10">Connect With Us</h2>
-            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
-                <div class="rounded-xl overflow-hidden shadow-2xl border-2 border-brand-gold hover:scale-105 transition-transform duration-300 w-full max-w-sm md:max-w-md">
-                    <img src="1.png" alt="Isbah Wealth & Immigration Business Card Front" class="w-full h-auto">
-                </div>
-                <div class="rounded-xl overflow-hidden shadow-2xl border-2 border-brand-gold hover:scale-105 transition-transform duration-300 w-full max-w-sm md:max-w-md">
-                    <img src="2.png" alt="Isbah Wealth & Immigration Business Card Back" class="w-full h-auto">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-12">
-            <div class="md:w-1/2">
-                <h2 class="text-3xl md:text-4xl font-bold text-brand-green mb-6">Get in Touch</h2>
-                <div class="bg-gray-50 border border-gray-200 p-6 md:p-8 rounded-2xl shadow-md">
-                    <h3 class="text-2xl md:text-3xl font-bold text-brand-green mb-1">Zahed Khan</h3>
-                    <p class="text-base md:text-lg text-gray-500 mb-6 md:mb-8 border-b border-gray-300 pb-4">Founder & Lead Consultant</p>
-
-                    <div class="space-y-4 md:space-y-6 text-gray-700 text-sm md:text-base">
-                        <div class="flex items-center">
-                            <i class="fas fa-envelope text-brand-green text-xl w-8"></i>
-                            <a href="mailto:zahedkhan3795@gmail.com" class="hover:text-brand-gold transition-colors font-medium break-all">zahedkhan3795@gmail.com</a>
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-[#cfa144] rounded-full blur-3xl opacity-20 animate-pulse"></div>
+                        <div class="w-72 h-72 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-[12px] border-[#cfa144]/20 shadow-2xl bg-white relative z-10">
+                            <img src="images/IMG_0843.jpg" alt="Zahed Khan" class="object-cover w-full h-full object-top">
                         </div>
-                        <div class="flex items-start md:items-center">
-                            <i class="fas fa-phone-alt text-brand-green text-xl w-8 mt-1 md:mt-0"></i>
-                            <div class="flex flex-col font-medium">
-                                <a href="tel:7017295641" class="hover:text-brand-gold transition-colors">701-729-5641</a>
-                                <a href="tel:5572045972" class="hover:text-brand-gold transition-colors">557-204-5972</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-16 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-[#cfa144] text-xl font-semibold mb-2 tracking-wide uppercase">About The Founder</h2>
+                    <h3 class="text-3xl md:text-4xl font-serif font-bold text-[#1a3628] mb-8">Precision, Trust, and Legacy Building</h3>
+                    <div class="space-y-5 text-slate-600 text-lg leading-relaxed">
+                        <p>Isbah Wealth & Immigration was founded on the core belief that securing your family's future requires both strategic planning and an unwavering attention to detail.</p>
+                        <p>As the Founder and Lead Consultant, <strong class="text-[#1a3628]">Zahed Khan</strong> brings a unique and highly effective skill set to the Houston community. With a professional background rooted in complex Data Quality Assurance and active investment management, Zahed applies an analytical, meticulous approach to every financial portfolio, tax document, and immigration form he handles.</p>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex flex-col gap-8 w-full">
+                    <div class="bg-[#1a3628] text-white p-8 rounded-2xl shadow-xl border-l-4 border-[#cfa144]">
+                        <h4 class="text-2xl font-serif font-bold mb-3">Our Mission</h4>
+                        <p class="text-slate-300">To provide Houston residents with high-quality, trustworthy consulting services that simplify the path to homeownership, financial independence, and legal residency.</p>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200 p-8 rounded-2xl shadow-lg border-l-4 border-[#cfa144]">
+                        <h4 class="text-2xl font-serif font-bold text-[#1a3628] mb-3">Our Commitment</h4>
+                        <p class="text-slate-600">Every application and investment strategy is handled with strict confidentiality and absolute precision. We treat your legacy as if it were our own.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-24 bg-slate-50 border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-[#1a3628] mb-4">Our Comprehensive Services</h2>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-3 gap-10">
+                <div class="service-card bg-white rounded-3xl shadow-lg border-t-8 border-[#cfa144] p-8 flex flex-col">
+                    <div class="flex items-center mb-8">
+                        <i class="fas fa-chart-line text-4xl text-[#1a3628] mr-4"></i>
+                        <h3 class="text-2xl font-serif font-bold">Financial & Tax</h3>
+                    </div>
+                    <div class="space-y-6 flex-grow text-sm">
+                        <div>
+                            <h4 class="font-bold text-[#cfa144] uppercase mb-2">Wealth & Advisory</h4>
+                            <ul class="text-slate-600 space-y-1">
+                                <li>• Financial planning & goal setting</li>
+                                <li>• Brokerage account advisory</li>
+                                <li>• Retirement growth strategies</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#cfa144] uppercase mb-2">Legacy & Education</h4>
+                            <ul class="text-slate-600 space-y-1">
+                                <li>• Roth & Traditional IRA account setup</li>
+                                <li>• Individual & Joint brokerage account setup</li>
+                                <li>• 529 & custodial plan setup assistance</li>
+                                <li>• Robinhood, Fidelity, & Schwab training</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#cfa144] uppercase mb-2">Tax & Business</h4>
+                            <ul class="text-slate-600 space-y-1">
+                                <li>• Individual & family tax return preparation</li>
+                                <li>• Business tax return prep (LLC/Corp)</li>
+                                <li>• Full-service payroll & bookkeeping</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="pages/finance.html" class="mt-8 pt-6 border-t block font-bold text-[#1a3628]">Detailed Finance Info <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+
+                <div class="service-card bg-white rounded-3xl shadow-lg border-t-8 border-[#cfa144] p-8 flex flex-col">
+                    <div class="flex items-center mb-8">
+                        <i class="fas fa-home text-4xl text-[#1a3628] mr-4"></i>
+                        <h3 class="text-2xl font-serif font-bold">Real Estate</h3>
+                    </div>
+                    <div class="space-y-6 flex-grow text-sm">
+                        <div>
+                            <h4 class="font-bold text-[#cfa144] uppercase mb-2">Residential Services</h4>
+                            <ul class="text-slate-600 space-y-1">
+                                <li>• Buying properties (First-Time & Investment)</li>
+                                <li>• Listing & selling properties</li>
+                                <li>• Market analysis & pricing strategy</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#cfa144] uppercase mb-2">New Construction</h4>
+                            <ul class="text-slate-600 space-y-1">
+                                <li>• Builder contract & incentive negotiation</li>
+                                <li>• Design center & lot selection advice</li>
+                                <li>• Construction phase inspections</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#cfa144] uppercase mb-2">Leasing & Relocation</h4>
+                            <ul class="text-slate-600 space-y-1">
+                                <li>• Landlord listing & tenant screening</li>
+                                <li>• Professional relocation assistance</li>
+                                <li>• Lease agreement execution</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="pages/realestate.html" class="mt-8 pt-6 border-t block font-bold text-[#1a3628]">Explore Properties <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+
+                <div class="service-card bg-white rounded-3xl shadow-lg border-t-8 border-[#cfa144] p-8 flex flex-col">
+                    <div class="flex items-center mb-8">
+                        <i class="fas fa-passport text-4xl text-[#1a3628] mr-4"></i>
+                        <h3 class="text-2xl font-serif font-bold">Immigration</h3>
+                    </div>
+                    <div class="space-y-6 flex-grow text-sm">
+                        <div>
+                            <h4 class="font-bold text-[#cfa144] uppercase mb-2">Family & Residency</h4>
+                            <ul class="text-slate-600 space-y-1">
+                                <li>• Family sponsorship (I-130 / I-129F)</li>
+                                <li>• Green card (I-485 / Adjustment of Status)</li>
+                                <li>• Removal of conditions (I-751)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#cfa144] uppercase mb-2">Consular & Visas</h4>
+                            <ul class="text-slate-600 space-y-1">
+                                <li>• DS-160 Visitor & DS-260 Immigrant Visas</li>
+                                <li>• Student Visa (F-1) Documentation</li>
+                                <li>• Re-entry permits & advance parole</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#cfa144] uppercase mb-2">Work & Citizenship</h4>
+                            <ul class="text-slate-600 space-y-1">
+                                <li>• Work authorization (I-765 EAD)</li>
+                                <li>• Affidavit of support (I-864)</li>
+                                <li>• Naturalization & citizenship (N-400)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="pages/immigration.html" class="mt-8 pt-6 border-t block font-bold text-[#1a3628]">Form Prep Details <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+            <div class="mt-16 bg-yellow-50 border-l-4 border-yellow-400 p-6 max-w-4xl mx-auto rounded-r-xl shadow-sm text-center">
+                <p class="text-sm text-yellow-800 font-medium">
+                    <i class="fas fa-exclamation-circle mr-2"></i>
+                    <strong>Immigration Disclaimer:</strong> We provide document preparation services only. We are not attorneys and do not offer legal advice.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-20 bg-[#1a3628] border-y-8 border-[#cfa144] text-center">
+            <h2 class="text-3xl font-serif font-bold text-white mb-12">Connect With Us</h2>
+            <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-8">
+                <img src="images/1.png" alt="Card Front" class="w-full max-w-sm rounded-xl shadow-2xl border-2 border-[#cfa144]">
+                <img src="images/2.png" alt="Card Back" class="w-full max-w-sm rounded-xl shadow-2xl border-2 border-[#cfa144]">
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 bg-white">
+            <div class="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row gap-16">
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-serif font-bold text-[#1a3628] mb-8">Get in Touch</h2>
+                    <div class="bg-slate-50 p-10 rounded-3xl shadow-lg border border-slate-200">
+                        <h3 class="text-3xl font-serif font-bold text-[#1a3628] mb-1">Zahed Khan</h3>
+                        <p class="text-[#cfa144] font-medium mb-8 border-b pb-4">Founder & Lead Consultant</p>
+                        <div class="space-y-6 text-slate-700">
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-envelope text-[#1a3628] text-xl"></i>
+                                <a href="mailto:zahedkhan3795@gmail.com" class="hover:text-[#cfa144]">zahedkhan3795@gmail.com</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-phone-alt text-[#1a3628] text-xl"></i>
+                                <span>701-729-5641 | 557-204-5972</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-map-marker-alt text-[#1a3628] text-xl"></i>
+                                <span>Houston, Texas</span>
                             </div>
                         </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-globe text-brand-green text-xl w-8"></i>
-                            <a href="https://www.isbahwealthandimmigration.com" target="_blank" class="hover:text-brand-gold transition-colors font-medium break-all">www.isbahwealthandimmigration.com</a>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-map-marker-alt text-brand-green text-xl w-8"></i>
-                            <span class="font-medium">Houston, Texas</span>
-                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="md:w-1/2">
-                <h3 class="text-2xl font-bold text-gray-800 mb-6">Send a Message</h3>
-
-                <form action="https://formsubmit.co/zahedkhan3795@gmail.com" method="POST" class="space-y-4">
+                <form action="https://formsubmit.co/zahedkhan3795@gmail.com" method="POST" class="lg:w-1/2 space-y-4">
                     <input type="hidden" name="_subject" value="New Inquiry from Isbah Website!">
-                    <input type="hidden" name="_captcha" value="true">
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <input type="text" name="First Name" placeholder="First Name" required class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-green">
-                        <input type="text" name="Last Name" placeholder="Last Name" required class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-green">
+                    <div class="grid grid-cols-2 gap-4">
+                        <input type="text" name="name" placeholder="Name" required class="p-4 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:ring-2 focus:ring-[#cfa144] transition-all">
+                        <input type="email" name="email" placeholder="Email" required class="p-4 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:ring-2 focus:ring-[#cfa144] transition-all">
                     </div>
-
-                    <input type="email" name="Email Address" placeholder="Email Address" required class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-green">
-
-                    <input type="tel" name="Phone Number" placeholder="Phone Number" class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-green">
-
-                    <textarea name="Message" placeholder="How can we help you?" required class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-green" rows="4"></textarea>
-
-                    <button type="submit" class="w-full bg-brand-green hover:bg-green-900 text-brand-gold font-bold py-4 rounded-xl transition-colors text-lg">Send Message</button>
+                    <input type="tel" name="phone" placeholder="Phone Number" class="w-full p-4 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:ring-2 focus:ring-[#cfa144]">
+                    <textarea name="message" placeholder="How can we help?" rows="4" class="w-full p-4 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:ring-2 focus:ring-[#cfa144]"></textarea>
+                    <button type="submit" class="w-full bg-[#1a3628] text-[#cfa144] font-bold py-4 rounded-xl hover:bg-green-900 transition-colors shadow-md transform hover:-translate-y-1">Send Message</button>
                 </form>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer class="bg-gray-900 text-gray-400 py-10 text-center border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4">
-            <h4 class="text-brand-gold text-xl font-serif mb-2">Isbah Wealth & Immigration</h4>
-            <p class="mb-4">Legacy Consulting & Trust</p>
-            <p class="text-sm">&copy; 2026 Isbah Wealth & Immigration | Houston, TX. All rights reserved.</p>
-        </div>
+    <footer class="bg-slate-900 text-slate-500 py-12 text-center border-t-4 border-[#cfa144]">
+        <h4 class="text-[#cfa144] text-2xl font-serif mb-2">Isbah Wealth & Immigration</h4>
+        <p class="mb-6">Legacy Consulting & Trust</p>
+        <p class="text-sm">&copy; 2026 Isbah Wealth & Immigration | Houston, TX. All rights reserved.</p>
     </footer>
 
-    <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const icon = btn.querySelector('i');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            if (menu.classList.contains('hidden')) {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            }
-        });
-
-        // Close menu when clicking a link
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Dynamic Navbar: Adds shadow and background opacity on scroll
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('shadow-xl', 'bg-opacity-95', 'backdrop-blur-sm');
+                } else {
+                    header.classList.remove('shadow-xl', 'bg-opacity-95', 'backdrop-blur-sm');
+                }
             });
+
+            // 2. Scroll Reveal: Fades in elements as the user scrolls down
+            const revealOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, revealOptions);
+
+            document.querySelectorAll('.animate-reveal').forEach(el => {
+                el.classList.add('transition-all', 'duration-1000', 'ease-out', 'opacity-0', 'translate-y-10');
+                revealObserver.observe(el);
+            });
+
+            // 3. Smooth Scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+            }
         });
     </script>
 </body>

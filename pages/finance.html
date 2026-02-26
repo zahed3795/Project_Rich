@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance & Tax Services | Isbah Wealth & Immigration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --brand-green: #1a3628;
+            --brand-gold: #cfa144;
+        }
+        .bg-brand-green { background-color: var(--brand-green); }
+        .text-brand-green { color: var(--brand-green); }
+        .bg-brand-gold { background-color: var(--brand-gold); }
+        .text-brand-gold { color: var(--brand-gold); }
+        .border-brand-gold { border-color: var(--brand-gold); }
+
+        .flag-ball {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease-in-out;
+            display: inline-block;
+            background-color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .flag-ball img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .flag-ball:hover { transform: scale(1.15); }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-900 flex flex-col min-h-screen">
+
+    <header class="bg-brand-green shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-2">
+                    <span class="font-bold text-xl md:text-2xl tracking-tight text-brand-gold font-serif">Isbah Wealth & Immigration</span>
+                </div>
+                <nav class="hidden lg:flex space-x-6 font-medium text-white items-center">
+                    <a href="../index.html" class="hover:text-brand-gold transition-colors pb-1">Home</a>
+                    <a href="../index.html#about" class="hover:text-brand-gold transition-colors pb-1">About</a>
+                    <a href="finance.html" class="text-brand-gold transition-colors border-b-2 border-brand-gold pb-1">Finance</a>
+                    <a href="realestate.html" class="hover:text-brand-gold transition-colors pb-1">Real Estate</a>
+                    <a href="immigration.html" class="hover:text-brand-gold transition-colors pb-1">Immigration</a>
+                    <a href="fees.html" class="hover:text-brand-gold transition-colors pb-1">Fees</a>
+
+                    <div class="flex items-center gap-2 px-4 py-1 border-l border-brand-gold/30 ml-2">
+                        <div class="flag-ball" title="USA"><img src="https://flagcdn.com/w80/us.png" alt="USA"></div>
+                        <div class="flag-ball" title="India"><img src="https://flagcdn.com/w80/in.png" alt="India"></div>
+                        <div class="flag-ball" title="Nepal"><img src="https://flagcdn.com/w80/np.png" alt="Nepal"></div>
+                        <div class="flag-ball" title="Pakistan"><img src="https://flagcdn.com/w80/pk.png" alt="Pakistan"></div>
+                        <div class="flag-ball" title="Bangladesh"><img src="https://flagcdn.com/w80/bd.png" alt="Bangladesh"></div>
+                    </div>
+
+                    <a href="../index.html#contact" class="bg-brand-gold text-brand-green px-6 py-2 rounded-lg font-bold hover:bg-yellow-500 transition-colors shadow-sm">Contact</a>
+                </nav>
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-brand-gold p-2"><i class="fas fa-bars text-3xl"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-green border-t border-brand-gold absolute w-full left-0 text-center py-6 space-y-4 shadow-xl">
+            <a href="../index.html" class="mobile-link block text-white text-lg">Home</a>
+            <a href="finance.html" class="mobile-link block text-brand-gold text-lg font-bold">Finance</a>
+            <a href="realestate.html" class="mobile-link block text-white text-lg">Real Estate</a>
+            <a href="immigration.html" class="mobile-link block text-white text-lg">Immigration</a>
+            <a href="fees.html" class="mobile-link block text-white text-lg">Fees</a>
+            <a href="../index.html#contact" class="mobile-link block bg-brand-gold text-brand-green mx-8 py-3 rounded-xl font-bold">Contact Us</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="bg-brand-green py-20 border-b-8 border-brand-gold text-center">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-brand-gold text-xl font-semibold mb-3 tracking-widest uppercase">Legacy Consulting & Trust</h2>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6">Financial & Tax Services</h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">Strategic planning, tax optimization, and wealth management solutions tailored for your future.</p>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-10">
+
+                    <div class="bg-white rounded-3xl shadow-lg border-t-8 border-brand-gold p-8">
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-hand-holding-usd text-3xl text-brand-green mr-4"></i>
+                            <h3 class="text-2xl font-bold text-brand-green">Wealth & Advisory</h3>
+                        </div>
+                        <ul class="space-y-4 text-gray-600">
+                            <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3"></i> <span><strong>Financial Planning:</strong> Comprehensive reviews of assets, liabilities, and long-term goals.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3"></i> <span><strong>Brokerage Advisory:</strong> Strategic guidance for active investment portfolios.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3"></i> <span><strong>Retirement Growth:</strong> Structuring accounts for optimal long-term expansion.</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-3xl shadow-lg border-t-8 border-brand-gold p-8">
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-laptop-code text-3xl text-brand-green mr-4"></i>
+                            <h3 class="text-2xl font-bold text-brand-green">Platform & Legacy</h3>
+                        </div>
+                        <ul class="space-y-4 text-gray-600">
+                            <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3"></i> <span><strong>Account Setup:</strong> Assistance with Roth/Traditional IRAs and 529 plans.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3"></i> <span><strong>Platform Training:</strong> Walkthroughs for Robinhood, Fidelity, and Schwab.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3"></i> <span><span><strong>Custodial Plans:</strong> Structured wealth transfer for minors (UGMA/UTMA).</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-3xl shadow-lg border-t-8 border-brand-gold p-8">
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-file-invoice-dollar text-3xl text-brand-green mr-4"></i>
+                            <h3 class="text-2xl font-bold text-brand-green">Tax Preparation</h3>
+                        </div>
+                        <ul class="space-y-4 text-gray-600">
+                            <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3"></i> <span><strong>Individual Returns:</strong> Accurate filing to maximize personal credits and deductions.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3"></i> <span><strong>Business Tax:</strong> Support for LLCs, Sole Proprietorships, and Corporations.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3"></i> <span><strong>Optimization:</strong> Year-round strategies to minimize future tax liabilities.</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-3xl shadow-lg border-t-8 border-brand-gold p-8">
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-calculator text-3xl text-brand-green mr-4"></i>
+                            <h3 class="text-2xl font-bold text-brand-green">Business Operations</h3>
+                        </div>
+                        <ul class="space-y-4 text-gray-600">
+                            <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3"></i> <span><strong>Full-Service Payroll:</strong> Accurate and timely payment for employees and contractors.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3"></i> <span><strong>Bookkeeping:</strong> Monthly ledger management and financial organization.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3"></i> <span><strong>Financial Reporting:</strong> Preparation of Profit/Loss statements and Balance Sheets.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-16 bg-gray-100 border-l-4 border-brand-gold p-6 rounded-r-xl shadow-sm">
+                    <p class="text-gray-700 text-sm italic text-center">
+                        <strong>Disclaimer:</strong> Financial markets involve risk. Information is for educational and advisory purposes. For complex corporate tax structuring, we recommend consulting with registered tax professionals.
+                    </p>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="../index.html#contact" class="bg-brand-gold text-brand-green px-10 py-4 rounded-xl font-bold shadow-lg inline-block hover:bg-yellow-500 transition-transform hover:-translate-y-1 text-lg">Schedule a Financial Review</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-10 text-center border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <h4 class="text-brand-gold text-xl font-serif mb-2">Isbah Wealth & Immigration</h4>
+            <p class="mb-4">Legacy Consulting & Trust</p>
+            <p class="text-sm">&copy; 2026 Isbah Wealth & Immigration | Houston, TX. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
